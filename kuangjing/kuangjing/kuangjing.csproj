@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F6AEE9F-1F70-4C24-90D4-F7C868177D64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>kuangjing</RootNamespace>
+    <AssemblyName>kuangjing</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\packages\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Extensions, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.2.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>H:\360downloads\新建文件夹\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baobiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baobiao.Designer.cs">
+      <DependentUpon>baobiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircularQueue.cs" />
+    <Compile Include="company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company.Designer.cs">
+      <DependentUpon>company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shebeishu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shebeishu.Designer.cs">
+      <DependentUpon>shebeishu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testDataSet.cs">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="testDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dianchi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dianchi.Designer.cs">
+      <DependentUpon>dianchi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dsensor.Designer.cs">
+      <DependentUpon>dsensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipment.Designer.cs">
+      <DependentUpon>equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fenbu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fenbu.Designer.cs">
+      <DependentUpon>fenbu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ip.Designer.cs">
+      <DependentUpon>ip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IQueue.cs" />
+    <Compile Include="jiansuji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jiansuji.Designer.cs">
+      <DependentUpon>jiansuji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lishishuju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lishishuju.Designer.cs">
+      <DependentUpon>lishishuju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="senddata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="senddata.Designer.cs">
+      <DependentUpon>senddata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorValue.Designer.cs">
+      <DependentUpon>SensorValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shujucaiji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shujucaiji.Designer.cs">
+      <DependentUpon>shujucaiji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quxian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quxian.Designer.cs">
+      <DependentUpon>quxian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="realdata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="realdata.Designer.cs">
+      <DependentUpon>realdata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shishixianshi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shishixianshi.Designer.cs">
+      <DependentUpon>shishixianshi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shujushangchuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shujushangchuan.Designer.cs">
+      <DependentUpon>shujushangchuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketClient.cs" />
+    <Compile Include="SocketConnection.cs" />
+    <Compile Include="SocketServer.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="upan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="upan.Designer.cs">
+      <DependentUpon>upan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user1.Designer.cs">
+      <DependentUpon>user1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user2.Designer.cs">
+      <DependentUpon>user2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user3.Designer.cs">
+      <DependentUpon>user3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user4.Designer.cs">
+      <DependentUpon>user4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs" />
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySqlConn.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="work.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="work.Designer.cs">
+      <DependentUpon>work.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="baobiao.resx">
+      <DependentUpon>baobiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company.resx">
+      <DependentUpon>company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dianchi.resx">
+      <DependentUpon>dianchi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dsensor.resx">
+      <DependentUpon>dsensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="equipment.resx">
+      <DependentUpon>equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fenbu.resx">
+      <DependentUpon>fenbu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ip.resx">
+      <DependentUpon>ip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jiansuji.resx">
+      <DependentUpon>jiansuji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lishishuju.resx">
+      <DependentUpon>lishishuju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Report1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="senddata.resx">
+      <DependentUpon>senddata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensorValue.resx">
+      <DependentUpon>SensorValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shebeishu.resx">
+      <DependentUpon>shebeishu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shujucaiji.resx">
+      <DependentUpon>shujucaiji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="quxian.resx">
+      <DependentUpon>quxian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="realdata.resx">
+      <DependentUpon>realdata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shishixianshi.resx">
+      <DependentUpon>shishixianshi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shujushangchuan.resx">
+      <DependentUpon>shujushangchuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upan.resx">
+      <DependentUpon>upan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1.resx">
+      <DependentUpon>user1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user2.resx">
+      <DependentUpon>user2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user3.resx">
+      <DependentUpon>user3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user4.resx">
+      <DependentUpon>user4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="work.resx">
+      <DependentUpon>work.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet.xsc">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="testDataSet.xss">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Coldairarrow.Util.Sockets.SocketClient.datasource" />
+    <None Include="Properties\DataSources\Coldairarrow.Util.Sockets.SocketConnection.datasource" />
+    <None Include="Properties\DataSources\Coldairarrow.Util.Sockets.SocketServer.datasource" />
+    <None Include="Properties\DataSources\company.datasource" />
+    <None Include="Properties\DataSources\dsensor.datasource" />
+    <None Include="Properties\DataSources\equipment.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Form_Login.datasource" />
+    <None Include="Properties\DataSources\ip.datasource" />
+    <None Include="Properties\DataSources\kuangjing.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\kuangjing.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\lishishuju.datasource" />
+    <None Include="Properties\DataSources\MainForm.datasource" />
+    <None Include="Properties\DataSources\MyMessageBox.datasource" />
+    <None Include="Properties\DataSources\MySqlConn.datasource" />
+    <None Include="Properties\DataSources\MyTest.CircularQueue`1[].datasource" />
+    <None Include="Properties\DataSources\MyTest.IQueue`1[].datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\quxian.datasource" />
+    <None Include="Properties\DataSources\realdata.datasource" />
+    <None Include="Properties\DataSources\senddata.datasource" />
+    <None Include="Properties\DataSources\SensorValue.datasource" />
+    <None Include="Properties\DataSources\shishixianshi.datasource" />
+    <None Include="Properties\DataSources\shujucaiji.datasource" />
+    <None Include="Properties\DataSources\shujushangchuan.datasource" />
+    <None Include="Properties\DataSources\user1.datasource" />
+    <None Include="Properties\DataSources\user2.datasource" />
+    <None Include="Properties\DataSources\user3.datasource" />
+    <None Include="Properties\DataSources\user4.datasource" />
+    <None Include="Properties\DataSources\Users.datasource" />
+    <None Include="Properties\DataSources\work.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timg %2811%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timg %2811%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timg %2812%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timg %2813%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
